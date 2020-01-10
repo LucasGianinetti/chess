@@ -1,0 +1,78 @@
+ChessView :
+    mets une pièce à un endroit
+    Enlève une pièce d'un endroiit
+    Pose une question à l'utilisateur
+        Demander le changement de pièce
+        Recommencer une partie
+        Equipe de départ
+        Bonus
+    Afficher une message 
+        échec et mat
+    
+
+ChessController
+    start
+        démarrer la ChessView
+    newGame
+        remettre à 0, mettre les pièces dans leurs positions initiales
+    
+    
+    
+
+
+ Bonus :
+    Equipe de départ
+    Affiche les moves possibles sur l'écran
+    Affiche les moves non disponibles echec et mat
+    
+
+    
+    
+PROJET :
+
+UML:
+    
+    ChessController
+        start() void
+        newGame() void -> demande quelle equipe on souhaite et place les pions correspondant en bas du 
+                        board
+                        -> le starter est l'équipe blanche
+                        -> création des 16 pièces + positionnement
+            
+        move() boolean
+        
+        Piece
+        int pos x
+        int pos y
+        firstMove boolean -> indique si la piece a deja bougée ou pas
+        move() boolean -> déplace une piece
+                      -> appeler move() pour savoir si le move est possible
+                            -> les moves possibles changent en fonction du firstMove ou d'un echec et mat
+        
+            Pawn
+                promote() void -> permet de transformer si il atteind le bord
+            Rook
+            
+            Knight
+            
+            Bishop
+            
+            Queen
+            
+            King
+                checkCount boolean -> true une fois que le roi est mis en échec
+                checkCheck(): boolean -> permet de verifier à chaque tour si le roi est en échec
+                                      -> verifier pour chaque piece adverse si elle peut se déplacer sur la                         case du roi
+                
+                
+                
+                
+DEPLACEMENTS
+
+    On met dans un tableau les cases comprises dans le déplacement
+    
+    
+    
+    ROOK :
+        ->Une seule coordonée doit être update
+        ->

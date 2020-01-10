@@ -1,0 +1,3 @@
+Est ce que l'attribut firstMove on le met dans Piece ou dans les Pawn, Rook et Knight ?
+    Ou est ce qu'on crée une sous-classe qui regroupe Pawn Rook et Knight
+    
